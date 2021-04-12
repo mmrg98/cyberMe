@@ -22,12 +22,7 @@ class CheckCard(View):
 		print("--------request.data----------", request.data)
 		response = cardpwn(card_number['card_number'])
 		return JsonResponse(response)
-	
-	def get(self, request, *args, **kwargs):
-		response = cardpwn(1234567887654321)
+
+	def get(self, request,card, *args, **kwargs):
+		response = cardpwn(card)#1234567887654321
 		return JsonResponse(response)
-
-
-
-
-

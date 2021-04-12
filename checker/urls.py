@@ -10,8 +10,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', TokenObtainPairView.as_view() , name='login'),
     path('signup/', views.SignUpAPIView.as_view(), name='register'),
-    path('check-card/', views.CheckCard.as_view(), name='check-card'),
-    
+    path('check-card/<int:card>/', views.CheckCard.as_view(), name='check-card'),
+
 ]
 
 if settings.DEBUG:
