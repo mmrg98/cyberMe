@@ -3,6 +3,8 @@ import os
 import sys
 import requests
 from googlesearch import search
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+from rest_framework.response import Response
 
 def cardpwn(card_number):
 	urls = []
@@ -26,13 +28,17 @@ def cardpwn(card_number):
 						total_url.append(item)
 
 		else:
-			return {'error': 'Invaild Card Number'}
+			# error when card number is long or short
+			return Response({'error': 'Invaild Card Number'}, HTTP_400_BAD_REQUEST)
 
 		total = len(total_url)
 		if total == 0:
-			return {'leaks': []}
+			# return when there is no leaks
+			return Response({'leaks': []}, HTTP_200_OK)
 		else:
-			return { 'leaks': total_url, 'total': total }
+			# return when there is leaks 
+			return Response({ 'leaks': total_url, 'total': total }, HTTP_200_OK)
 
 	except ValueError:
-		return {'error': 'Invaild Card Number Entered...'}
+		# error when card number id not integer
+		return Response({'error': 'Invaild Card Number Entered...'}, HTTP_400_BAD_REQUEST)
