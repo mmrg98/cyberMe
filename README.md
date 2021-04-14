@@ -6,5 +6,7 @@ to run this project:
 - Now you can clone this repository by typing `git clone https://github.com/mmrg98/cyberMe.git`
 - Then navigate to cyberMe folder by typing `cd cyberMe` and install requirements by typing `pip install -r requirements.txt`
 - Finally, you can run the project by typing `python manage.py runserver`
+- You can run this project using a browser, Postman or any similar program. To download Postman: https://www.postman.com/downloads/
+- 
 
 
