@@ -8,5 +8,5 @@ to run this project:
 - Finally, you can run the project by typing `python manage.py runserver`
 - You can run this project using a browser, Postman or any similar program. To download Postman: https://www.postman.com/downloads/
 
-Note: check credit cark may take a few minutes
+Note: check credit card may take a few minutes
 
