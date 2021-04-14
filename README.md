@@ -7,6 +7,6 @@ to run this project:
 - Then navigate to cyberMe folder by typing `cd cyberMe` and install requirements by typing `pip install -r requirements.txt`
 - Finally, you can run the project by typing `python manage.py runserver`
 - You can run this project using a browser, Postman or any similar program. To download Postman: https://www.postman.com/downloads/
-- 
 
+Note: check credit cark may take a few minutes
 
