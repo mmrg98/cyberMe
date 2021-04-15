@@ -89,3 +89,4 @@ local_settings.py
 email_info.py
 
 .vscode
+.env

@@ -4,10 +4,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from check import views
 from rest_framework_simplejwt.views import TokenObtainPairView
+import os
 
 
 urlpatterns = [
-    path('admin-control/', admin.site.urls),
+    path(os.getenv('ADMIN_URL'), admin.site.urls),
     path('login/', TokenObtainPairView.as_view() , name='login'),
     path('signup/', views.SignUpAPIView.as_view(), name='register'),
     path('check-card/<str:card>/', views.CheckCard.as_view(), name='check-card'),
