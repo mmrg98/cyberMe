@@ -9,11 +9,15 @@ import os
 
 urlpatterns = [
     path(os.getenv('ADMIN_URL'), admin.site.urls),
-    path('login/', TokenObtainPairView.as_view() , name='login'),
+    path('login/', TokenObtainPairView.as_view(), name='login'),
     path('signup/', views.SignUpAPIView.as_view(), name='register'),
-    path('check-card/<str:card>/', views.CheckCard.as_view(), name='check-card'),
+    path(
+        'check-card/<str:card>/', views.CheckCard.as_view(), name='check-card'
+        ),
 
 ]
 
 if settings.DEBUG:
-    urlpatterns+=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+        )
