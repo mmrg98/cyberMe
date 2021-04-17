@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['157.175.90.144','*']
+
 
 
 # Application definition
@@ -86,11 +87,23 @@ WSGI_APPLICATION = 'checker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+# if DEBUG:
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+DATABASES  =  {
+	'default':  {
+	'ENGINE':  'django.db.backends.postgresql_psycopg2',
+	'NAME':  'postgres',
+	'USER':  'postgres',
+	'PASSWORD':  'O2F17BcrUpyOjGTXmwjo',
+	'HOST':  'database-aws-cyberme.c1iscvfx5obj.me-south-1.rds.amazonaws.com',
+	'PORT':  '5432',
+	}
 }
 
 
