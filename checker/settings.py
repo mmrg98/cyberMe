@@ -88,23 +88,23 @@ WSGI_APPLICATION = 'checker.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # if DEBUG:
-# DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 # else:
-DATABASES  =  {
-	'default':  {
-	'ENGINE':  'django.db.backends.postgresql_psycopg2',
-	'NAME':  'postgres',
-	'USER':  'postgres',
-	'PASSWORD':  'O2F17BcrUpyOjGTXmwjo',
-	'HOST':  'database-aws-cyberme.c1iscvfx5obj.me-south-1.rds.amazonaws.com',
-	'PORT':  '5432',
-	}
-}
+# DATABASES  =  {
+# 	'default':  {
+# 	'ENGINE':  'django.db.backends.postgresql_psycopg2',
+# 	'NAME':  'postgres',
+# 	'USER':  'postgres',
+# 	'PASSWORD':  os.getenv('DATABASE_PASSWORD'),
+# 	'HOST':  'database-aws-cyberme.c1iscvfx5obj.me-south-1.rds.amazonaws.com',
+# 	'PORT':  '5432',
+# 	}
+# }
 
 
 REST_FRAMEWORK = {
